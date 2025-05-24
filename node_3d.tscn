@@ -1,12 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3v5rgv5w06a5"]
+[gd_scene load_steps=9 format=3 uid="uid://d3v5rgv5w06a5"]
 
-[ext_resource type="PackedScene" uid="uid://q200n6tb0v16" path="res://floor_base.tscn" id="1_a202f"]
+[ext_resource type="PackedScene" path="res://floor_base.tscn" id="1_a202f"]
+[ext_resource type="ArrayMesh" uid="uid://04rr6vtk1ewq" path="res://addons/tiny_treats_homely_house_set/Assets/obj/house.obj" id="2_jsk3o"]
+[ext_resource type="ArrayMesh" uid="uid://qb6mbjf2dua1" path="res://addons/tiny_treats_homely_house_set/Assets/obj/house_door.obj" id="3_4arys"]
+[ext_resource type="ArrayMesh" uid="uid://nn2o7wtkmk4y" path="res://addons/tiny_treats_homely_house_set/Assets/obj/tree_large.obj" id="4_6iypd"]
+[ext_resource type="ArrayMesh" uid="uid://b4ghvmvq7obtx" path="res://addons/tiny_treats_homely_house_set/Assets/obj/cobblestones.obj" id="5_tereu"]
+[ext_resource type="ArrayMesh" uid="uid://bsdtcnk602rti" path="res://addons/tiny_treats_homely_house_set/Assets/obj/fence_straight_long.obj" id="6_cdqbm"]
+[ext_resource type="ArrayMesh" uid="uid://bmltsj2x3h8pd" path="res://addons/tiny_treats_homely_house_set/Assets/obj/boots.obj" id="7_imku0"]
+[ext_resource type="ArrayMesh" uid="uid://d4hdckbwsxljk" path="res://addons/tiny_treats_homely_house_set/Assets/obj/mailbox.obj" id="8_wlxy5"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="FloorBase" parent="." instance=ExtResource("1_a202f")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 46.7896, 0)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 45.1634, 0)
 
 [node name="GridMap" type="GridMap" parent="."]
 
 [node name="Node" type="Node" parent="."]
+
+[node name="House" type="MeshInstance3D" parent="."]
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 37.9853, 43.619, -32.2032)
+mesh = ExtResource("2_jsk3o")
+
+[node name="HouseDoor" type="MeshInstance3D" parent="."]
+transform = Transform3D(25, 0, 0, 0, 24.9694, -1.23737, 0, 1.23737, 24.9694, 37.7137, 46.9875, -33.6248)
+mesh = ExtResource("3_4arys")
+
+[node name="TreeLarge" type="MeshInstance3D" parent="."]
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 202.001, 49.5374, -153.781)
+mesh = ExtResource("4_6iypd")
+
+[node name="Cobblestones" type="MeshInstance3D" parent="."]
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 46.5184, 44.5796, 99.4459)
+mesh = ExtResource("5_tereu")
+
+[node name="Cobblestones3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-24.8574, 0, 2.66615, 0, 25, 0, -2.66615, 0, -24.8574, 37.8731, 44.5879, 131.596)
+mesh = ExtResource("5_tereu")
+
+[node name="Cobblestones4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-23.5806, 0, -8.30403, 0, 25, 0, 8.30403, 0, -23.5806, 37.5548, 45.0975, 176.311)
+mesh = ExtResource("5_tereu")
+
+[node name="Cobblestones5" type="MeshInstance3D" parent="."]
+transform = Transform3D(23.5979, 0, 8.25462, 0, 25, 0, -8.25462, 0, 23.5979, 33.1799, 44.8212, 210.522)
+mesh = ExtResource("5_tereu")
+
+[node name="Cobblestones6" type="MeshInstance3D" parent="."]
+transform = Transform3D(-24.8959, 0, 2.27885, 0, 25, 0, -2.27885, 0, -24.8959, 23.2393, 44.987, 247.396)
+mesh = ExtResource("5_tereu")
+
+[node name="Cobblestones2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.7491, 166.843, 199.364)
+mesh = ExtResource("5_tereu")
+
+[node name="FenceStraightLong" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.06389, 0, 24.9774, 0, 25, 0, -24.9774, 0, 1.06389, 73.5555, 44.6414, 155.898)
+mesh = ExtResource("6_cdqbm")
+
+[node name="Boots" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.671321, 0, 11.9812, 0, 12, 0, -11.9812, 0, 0.671321, 55.9701, 53.5528, 45.0104)
+mesh = ExtResource("7_imku0")
+
+[node name="Mailbox" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.25567, 0, 21.9641, 0, 22, 0, -21.9641, 0, 1.25567, -4.94965, 43.1521, 262.609)
+mesh = ExtResource("8_wlxy5")
