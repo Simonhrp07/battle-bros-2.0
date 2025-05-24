@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d3v5rgv5w06a5"]
+[gd_scene load_steps=14 format=3 uid="uid://d3v5rgv5w06a5"]
 
 [ext_resource type="PackedScene" path="res://floor_base.tscn" id="1_a202f"]
 [ext_resource type="ArrayMesh" uid="uid://04rr6vtk1ewq" path="res://addons/tiny_treats_homely_house_set/Assets/obj/house.obj" id="2_jsk3o"]
@@ -8,6 +8,11 @@
 [ext_resource type="ArrayMesh" uid="uid://bsdtcnk602rti" path="res://addons/tiny_treats_homely_house_set/Assets/obj/fence_straight_long.obj" id="6_cdqbm"]
 [ext_resource type="ArrayMesh" uid="uid://bmltsj2x3h8pd" path="res://addons/tiny_treats_homely_house_set/Assets/obj/boots.obj" id="7_imku0"]
 [ext_resource type="ArrayMesh" uid="uid://d4hdckbwsxljk" path="res://addons/tiny_treats_homely_house_set/Assets/obj/mailbox.obj" id="8_wlxy5"]
+[ext_resource type="ArrayMesh" uid="uid://dqp60ch3p7f8j" path="res://addons/tiny_treats_homely_house_set/Assets/obj/mailbox_door.obj" id="9_tereu"]
+[ext_resource type="ArrayMesh" uid="uid://772jt06sw3da" path="res://addons/tiny_treats_homely_house_set/Assets/obj/package.obj" id="10_cdqbm"]
+[ext_resource type="ArrayMesh" uid="uid://bdboeavsav0wx" path="res://addons/tiny_treats_homely_house_set/Assets/obj/mailbox_flag.obj" id="11_imku0"]
+[ext_resource type="ArrayMesh" uid="uid://cx8akbxsc5p1o" path="res://addons/tiny_treats_homely_house_set/Assets/obj/foliage_B.obj" id="12_cdqbm"]
+[ext_resource type="ArrayMesh" uid="uid://dleg5chopcjou" path="res://addons/tiny_treats_homely_house_set/Assets/obj/foliage_A.obj" id="13_imku0"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -50,8 +55,8 @@ mesh = ExtResource("5_tereu")
 transform = Transform3D(-24.8959, 0, 2.27885, 0, 25, 0, -2.27885, 0, -24.8959, 23.2393, 44.987, 247.396)
 mesh = ExtResource("5_tereu")
 
-[node name="Cobblestones2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.7491, 166.843, 199.364)
+[node name="Cobblestones7" type="MeshInstance3D" parent="."]
+transform = Transform3D(-12.1641, 0, -21.8411, 0, 25, 0, 21.8411, 0, -12.1641, 23.2393, 44.987, 284.553)
 mesh = ExtResource("5_tereu")
 
 [node name="FenceStraightLong" type="MeshInstance3D" parent="."]
@@ -65,3 +70,35 @@ mesh = ExtResource("7_imku0")
 [node name="Mailbox" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.25567, 0, 21.9641, 0, 22, 0, -21.9641, 0, 1.25567, -4.94965, 43.1521, 262.609)
 mesh = ExtResource("8_wlxy5")
+
+[node name="MailboxDoor" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.445009, 0, 16.9942, 0, 17, 0, -16.9942, 0, 0.445009, -2.62411, 49.1882, 263.812)
+mesh = ExtResource("9_tereu")
+
+[node name="Package" type="MeshInstance3D" parent="."]
+transform = Transform3D(15.1805, 0, 7.65194, 0, 17, 0, -7.65194, 0, 15.1805, -1.82532, 45.0448, 274.179)
+mesh = ExtResource("10_cdqbm")
+
+[node name="Package2" type="MeshInstance3D" parent="."]
+transform = Transform3D(10.1547, -7.12573, 11.6235, 11.2478, 12.5694, -2.12086, -7.70516, 8.9574, 12.2227, -8.64291, 50.458, 281.381)
+mesh = ExtResource("10_cdqbm")
+
+[node name="MailboxFlag" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.875786, 0, 16.9774, 0, 17, 0, -16.9774, 0, 0.875786, -4.50067, 50.4934, 261.397)
+mesh = ExtResource("11_imku0")
+
+[node name="FoliageB" type="MeshInstance3D" parent="."]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, -5.43231, 47.6271, 50.9746)
+mesh = ExtResource("12_cdqbm")
+
+[node name="FoliageB2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-39.8227, 0, -3.76155, 0, 40, 0, 3.76155, 0, -39.8227, 83.4281, 43.8268, 53.0233)
+mesh = ExtResource("12_cdqbm")
+
+[node name="FoliageA" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.95587, 0, 38.9845, 0, 40, 0, -38.9845, 0, 8.95587, 80.4433, 47.1157, 44.8688)
+mesh = ExtResource("13_imku0")
+
+[node name="FoliageA2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-19.6884, 0, -34.819, 0, 40, 0, 34.819, 0, -19.6884, -2.67876, 46.7132, 58.6828)
+mesh = ExtResource("13_imku0")
