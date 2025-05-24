@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://q200n6tb0v16"]
+
+[ext_resource type="ArrayMesh" uid="uid://d3drmetky1xtr" path="res://addons/tiny_treats_homely_house_set/Assets/obj/floor_base.obj" id="1_dpdtn"]
+
+[node name="FloorBase" type="MeshInstance3D"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+mesh = ExtResource("1_dpdtn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
