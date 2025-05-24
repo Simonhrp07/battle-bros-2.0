@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3v5rgv5w06a5"]
+
+[ext_resource type="PackedScene" uid="uid://chccq7vkwkhwe" path="res://floor_base.tscn" id="1_r6dh1"]
+[ext_resource type="PackedScene" uid="uid://delx6g1omg5rx" path="res://player.tscn" id="2_h8l20"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hp17q"]
+sky_top_color = Color(0.280364, 0.482219, 0.544946, 1)
+sky_horizon_color = Color(0.818176, 0.623511, 0.395652, 1)
+ground_bottom_color = Color(0.111379, 0.204198, 0.0351971, 1)
+ground_horizon_color = Color(0.611298, 0.684966, 0.658398, 1)
+sun_angle_max = 7.5
+sun_curve = 0.121838
+
+[sub_resource type="Sky" id="Sky_s1xry"]
+sky_material = SubResource("ProceduralSkyMaterial_hp17q")
+
+[sub_resource type="Environment" id="Environment_0yqk5"]
+background_mode = 2
+background_color = Color(0, 0, 0.431373, 1)
+sky = SubResource("Sky_s1xry")
+ambient_light_source = 3
+ambient_light_color = Color(0.365273, 0.720369, 0.758, 1)
+ambient_light_energy = 1.13
+reflected_light_source = 2
+tonemap_mode = 2
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0yqk5")
+
+[node name="FloorBase" parent="." instance=ExtResource("1_r6dh1")]
+
+[node name="GridMap" type="GridMap" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("2_h8l20")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0446091, 65.3555, -0.00980663)

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://delx6g1omg5rx"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_sh265"]
+radius = 0.675
+height = 2.48
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_sh265")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.924193, 0.381925, 0, -0.381925, 0.924193, 0, 6.55465, 10.887)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.50282, 0, 0, 0, 1.50282, 0, 0, 0, 1.50282, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_4flbx")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
