@@ -10,3 +10,7 @@ transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 46.7896, 0)
 [node name="GridMap" type="GridMap" parent="."]
 
 [node name="Node" type="Node" parent="."]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
