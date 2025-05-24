@@ -1,9 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://q200n6tb0v16"]
+[gd_scene load_steps=3 format=3 uid="uid://chccq7vkwkhwe"]
 
 [ext_resource type="ArrayMesh" uid="uid://d3drmetky1xtr" path="res://addons/tiny_treats_homely_house_set/Assets/obj/floor_base.obj" id="1_dpdtn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dpdtn"]
+size = Vector3(8.94849, 0.445801, 7.58643)
 
 [node name="FloorBase" type="MeshInstance3D"]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
 mesh = ExtResource("1_dpdtn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.201277, -0.21411, -0.218339)
+shape = SubResource("BoxShape3D_dpdtn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.216391, 1.55781, 0)
